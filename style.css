@@ -15,12 +15,66 @@ html {
 .container {
     display: grid;
     grid-template-columns: auto 2fr 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: auto 3fr;
     height: 100%;
 }
 
-.topbar {
+.header {
+    display: grid;
+    row-gap: 20px;
+    padding: 16px 32px;
     grid-column: 2 / 4;
+    font-weight: bold;
+    height: min-content;
+}
+
+#search-icon,
+#bell-icon {
+    width: 30px;
+}
+
+#profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header .search-bar {
+    display: grid;
+    grid-template-columns: auto 8fr auto auto 1fr;
+    align-items: center;
+    column-gap: 16px;
+    height: min-content;
+}
+
+.search-bar input {
+    height: 5ch;
+    background-color: #e1e8f1;
+    border: none;
+    border-radius: 20px;
+}
+
+.profile-actions {
+    display: grid;
+    grid-template-columns: auto 15fr 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.profile-actions img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.profile-actions button {
+    background-color: #0095da;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 1.5ch;
+    font-weight: bold;
 }
 
 .sidebar {
