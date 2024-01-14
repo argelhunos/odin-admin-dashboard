@@ -14,7 +14,7 @@ html {
 
 .container {
     display: grid;
-    grid-template-columns: auto 2fr 1fr;
+    grid-template-columns: auto 3fr 1fr;
     grid-template-rows: auto 3fr;
     height: 100%;
 }
@@ -119,8 +119,7 @@ html {
     box-sizing: content-box;
 }
 
-.projects-grid,
-.announcements-trending-bar {
+.projects-grid {
     display: grid;
     background-color: #e1e8f1;
     grid-template-rows: auto 1fr;
@@ -128,6 +127,12 @@ html {
 
 .projects-grid .your-projects {
     padding: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.announcements-trending-bar .announcements,.trending {
+    padding: 20px 0;
     font-weight: bold;
     font-size: larger;
 }
@@ -142,8 +147,8 @@ html {
 .project-item {
     display: grid;
     background-color: white;
-    grid-template-columns: 5px 1fr;
-    border-radius: 4px;
+    grid-template-columns: 10px 1fr;
+    border-radius: 8px;
 }
 
 .project-item .project-content {
@@ -156,9 +161,13 @@ html {
     font-size: large;
 }
 
+.project-content .description {
+    color: gray;
+}
+
 .project-item .yellowbar {
     background-color: #fbb100;
-    width: 5px;
+    width: 10px;
     grid-row: 1 / span 3;
     grid-column: 1 / span 1;
     border-top-left-radius: 4px;
@@ -179,4 +188,54 @@ html {
 
 .project-action-buttons img {
     width: 30px;
+}
+
+.announcements-trending-bar {
+    display: grid;
+    background-color: #e1e8f1;
+    padding: 0 40px;
+    grid-template-rows: min-content auto min-content auto;
+}
+
+.announcements-container,
+.trending-container {
+    display: grid;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.trending-container {
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.line-break {
+    background-color: #e1e8f1;
+    height: 2px;
+}
+
+.announcement-title {
+    font-weight: bold;
+}
+
+.announcement-description {
+    color: gray;
+}
+
+.trending-user {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 2ch 2ch;
+    gap: 10px;
+}
+
+.trending-user img {
+    width: 50px;
+    grid-template-columns: 1 / span 1;
+    grid-row: 1 / span 2;
+    border-radius: 50%;
+}
+
+.trending-user .user-description {
+    color: gray;
 }
